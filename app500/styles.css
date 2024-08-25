@@ -1,0 +1,241 @@
+/* Estilo base */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    flex-direction: column;
+}
+
+.background-container {
+            background-image: url('img/fondo.png'); /* Reemplaza con la ruta de tu imagen */
+            background-size: cover; /* Esto ajusta la imagen para cubrir toda la página */
+            background-position: center; /* Esto centra la imagen en la página */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+            height: 100vh; /* Hace que el contenedor cubra toda la altura de la ventana */
+            display: none;/* Ocultas ambas secciones por defecto*/
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            color: white; /* Cambia el color del texto a blanco para mejor legibilidad */
+            
+        }
+
+.form-container {
+            background-color: rgba(0, 0, 0, 0.5); /* Añade un fondo semitransparente detrás del formulario */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .form-container input {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .form-container button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+
+.start-container {
+    text-align: center;
+}
+
+.quiz-container {
+    flex: 1;
+    display: none; /* Ocultas ambas secciones por defecto */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;    
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+}
+.quiz-container::before {
+    content: '';
+    position: absolute;
+    height: 100vh;    
+    background-image: url('img/CHACAMARCA.jpg'); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover; /* Esto ajusta la imagen para cubrir toda la página */
+    background-position: center; /* Esto centra la imagen en la página */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    opacity: 0.5; /* Ajusta el valor de opacidad según tus necesidades */
+    z-index: -1; /* Coloca el fondo detrás del contenido */
+    flex: 1;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    
+    width: 300px;
+    }
+
+.quiz-header {
+    margin-bottom: 20px;
+}
+
+.quiz-header h2 {
+    font-size: 18px;
+    text-align: justify;
+}
+#question {
+    text-align: justify;
+}
+
+#buttons-container {
+    display: flex;
+    flex-direction: column;
+}
+
+button.option {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 16px;
+    width: 100%;
+}
+
+button.option:hover {
+    background-color: #0056b3;
+}
+
+p {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilo para el nombre de usuario */
+.user-info {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.user-info p {
+    font-size: 18px;
+    color: #555;
+    margin: 0;
+}
+
+/* Estilos del modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.modal-content img {
+    max-width: 100px;
+    margin: 20px 0;
+}
+
+button#closeModal {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button#closeModal:hover {
+    background-color: #0056b3;
+}
+
+.question-image {
+    max-width: 100%;
+    height: 150px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-video {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: none;
+    outline: none;
+}
+
+/* Aquí irían tus estilos existentes */
+.reset-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reset-button:hover {
+            background-color: #c82333;
+}
+
+.puntuacion {
+    position: absolute;
+    bottom: 120px;
+    right: 200px;
+}
+
+.puntuacion p {
+    text-align: center;    
+}
+
+#jugar {    
+    position: absolute;
+    bottom: 320px;
+    right: 160px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: center;
+}

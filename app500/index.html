@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Página de Inicio -->
+    <div id="startPage" class="start-container">
+        <div id="inicio" class="background-container">
+        <div class="form-container">
+    
+        <h2>Bienvenido a la Quiz App</h2>
+        <form id="loginForm">
+        <input type="text" id="username" placeholder="Ingresa tu nombre">
+        <button id="startBtn">Comenzar Quiz</button>
+
+        </form>
+    </div>
+    </div>
+    </div>
+    <a href="juego1/index.html"><button id="jugar"> Jugar</button></a>
+
+    <!-- Página del Quiz -->
+<div id="quizPage" class="quiz-container" style="display:none;">
+    <div class="quiz-header">
+        
+        <h2 id="question">Pregunta del Quiz</h2>
+        <img id="questionImage" src="" alt="Imagen de la pregunta" class="question-image" style="display:none;">
+        <div id="buttons-container">
+            <!-- Aquí se agregarán los botones dinámicamente -->
+        </div>
+        <div id="text-input-container" style="display: none;">
+            <!-- Aquí se agregarán los cuadros de texto dinámicamente -->
+        </div>
+    </div>
+    <!-- Botón de reinicio -->
+    <button id="resetButton" class="reset-button">Reiniciar Quiz</button>
+    <div class="puntuacion">
+    <p>Puntuación: <span id="score">0</span> puntos</p>
+    </div>
+    <div class="user-info">
+        <p id="userDisplay">Usuario: </p>
+    </div>
+</div>
+<!-- Boton de reinicio -->
+ 
+
+    
+
+
+
+ <!-- Modal para alertas personalizadas -->
+<div id="alertModal" class="modal">
+    <div class="modal-content">
+        <span id="modalMessage"></span>
+        <video id="modalVideo" class="modal-video" autoplay muted></video>
+        <button id="closeModal">Cerrar</button>
+    </div>
+</div>
+
+
+    <!-- Elementos de audio para sonidos -->
+    <audio id="correctSound" src="sonidos/correcto.mp3"></audio>
+    <audio id="incorrectSound" src="sonidos/incorrecto.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
